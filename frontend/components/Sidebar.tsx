@@ -6,6 +6,7 @@ import { format } from 'date-fns';
 import { type Incident } from '@/lib/api';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 interface SidebarProps {
   incidents: Incident[];
@@ -122,7 +123,15 @@ export default function Sidebar({
           {/* Footer */}
           <div className="p-4 border-t border-gray-800">
             <div className="flex items-center gap-2 text-xs text-gray-400">
-              <Sparkles className="h-3 w-3" />
+              <div className="relative w-4 h-4 flex items-center justify-center">
+                <Image 
+                  src="/Ailogo.png" 
+                  alt="Logo" 
+                  width={16} 
+                  height={16}
+                  className="object-contain"
+                />
+              </div>
               <span>AI On-Call Engineer</span>
             </div>
           </div>

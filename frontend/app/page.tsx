@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Upload, FileText, AlertCircle, CheckCircle2, Clock, Loader2, Sparkles, Zap, Brain, Rocket, Star, X, Send } from 'lucide-react';
 import { uploadLog, getIncidents, type Incident } from '@/lib/api';
 import { format } from 'date-fns';
+import Image from 'next/image';
 import Sidebar from '@/components/Sidebar';
 import Navbar from '@/components/Navbar';
 
@@ -136,8 +137,14 @@ export default function Home() {
             /* Welcome Screen */
             <div className="flex flex-col items-center justify-center h-full px-4">
               <div className="max-w-2xl w-full text-center animate-fade-in">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 mb-6 shadow-xl">
-                  <Sparkles className="h-10 w-10 text-white" />
+                <div className="inline-flex items-center justify-center w-20 h-20 mb-6">
+                  <Image 
+                    src="/Ailogo.png" 
+                    alt="AI On-Call Engineer Logo" 
+                    width={80} 
+                    height={80}
+                    className="object-contain"
+                  />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                   AI On-Call Engineer
